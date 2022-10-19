@@ -1,0 +1,8 @@
+file_format: "1"
+id: jo_gkb
+name: Jonathans gaming keyboard
+type: shield
+url: https://github.com/jerwitt/jo_gkb
+requires: [pro_micro]
+features:
+  - keys

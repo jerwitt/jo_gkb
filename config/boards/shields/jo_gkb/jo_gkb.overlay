@@ -1,0 +1,32 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+  chosen {
+    zmk,kscan = &kscan0;
+  };
+
+  kscan0: kscan {
+    compatible = "zmk,kscan-gpio-direct";
+
+    label = "KSCAN";
+
+    input-gpios
+      = <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Sprint (CTRL)
+      , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Menu/Exit Menu (ESC)
+      , <&pro_micro 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Drop (Q)
+      , <&pro_micro 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Strafe Left (A)
+      , <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Forward (W)
+      , <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Backward (S)
+      , <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Inventory (E)
+      , <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Strafe Right (D)
+      , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Jump (SPACE)
+      , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>// Switch Tabs (ALT+TAB)
+      ;
+
+  };
+
+};
